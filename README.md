@@ -1,59 +1,57 @@
-# LankaStocks
+# Business website
 
-Colombo Stock Exchange market data, portfolio tracking and an investor social feed in one app. Web (mobile + desktop layouts), installable PWA, and an Android shell via Capacitor.
+Public marketing website for the POS and back-office product (working name: **Polymath**). A static site with no dependencies: one page, a privacy policy and website terms.
 
-## Run
+## Change the name, contact details or prices
 
-```bash
-npm install
-npm run dev          # http://localhost:3000
-npm run build && npm start
-```
+Everything brand-specific is in **`site.config.json`**:
 
-Copy `.env.example` to `.env.local`. Set `ADMIN_KEY` before deploying; the admin console is at `/admin` (in development the key is `dev-admin`).
-
-If your network needs an HTTP proxy to reach `www.cse.lk`, start Node with `NODE_USE_ENV_PROXY=1`.
-
-## What is in the MVP
-
-| Area | Details |
+| Key | What it controls |
 | --- | --- |
-| Markets | Live (delayed) prices for every CSE security, ASPI and S&P SL20, sector indices, movers, sortable table, screener filters, search |
-| Company page | Interactive chart (1D to 1Y), key statistics, day and 52-week ranges, technical analysis (RSI, MACD, moving averages, volatility, drawdown), price alerts, `$TICKER` discussion |
-| Feed | For you (ranked), Following, News (official CSE announcements), Saved. Posts with text, images and video, replies, quote reposts, likes, bookmarks, follows, reports |
-| Safety | On-device nudity screening before upload, server text rules (adult content, abuse, scams, manipulation), review queue, three-report auto-hide, strikes, rate limits |
-| Portfolio | Holdings with profit and loss, allocation, CSV export, watchlist |
-| Revenue hooks | Sponsored slots and promoted posts, Premium tier gating, verified-profile applications, broker (CDS account) lead capture |
+| `brand.name`, `brand.company`, `brand.tagline` | The name everywhere on the site, page titles and the footer |
+| `site.url` | Your domain, used for search engines and link previews |
+| `contact.whatsapp` | WhatsApp number in international format, e.g. `94771234567`. Turns on the WhatsApp buttons |
+| `contact.email`, `contact.phoneDisplay`, `contact.city` | Footer and legal pages |
+| `contact.formEndpoint` | Optional URL that receives demo requests as JSON (a form service or your own function) |
+| `tracking.metaPixelId`, `googleTagId`, `tiktokPixelId` | Advert tracking. Leave empty until the ad accounts exist |
+| `pricing.show`, `pricing.plans` | Show or hide prices, and the plans |
+| `faq` | Questions and answers |
 
-## Architecture
+Renaming the brand is a one-line change to `brand.name`, then rebuild.
 
-- `src/lib/market` — data layer. `cse.ts` adapts the public cse.lk endpoints (cached, with stale and sample fallbacks). Replace this one file to move to a licensed feed.
-- `src/lib/social` — `store.ts` (file-backed store), `moderation.ts`, `ranking.ts` (feed algorithm), `server.ts` (sessions, announcement ingest).
-- `src/app/api` — route handlers. `src/app/*` — screens. `src/components` — UI kit, charts, feed, shell.
-- `supabase/schema.sql` — production database schema (tables, counters, row-level security).
+**How demo requests reach you:** if `formEndpoint` is set, the form posts there. Otherwise it opens WhatsApp with the details filled in, or falls back to email. Until one of the three is set the form tells visitors that contact details are being set up.
 
-### Feed ranking (`src/lib/social/ranking.ts`)
-
-1. Candidates: live posts from the last 14 days.
-2. Score: Bayesian-smoothed engagement rate (likes, reposts, replies, bookmarks, dwell time) x 8-hour half-life decay x personal affinity (follows, watchlist and portfolio tickers, past interactions) x credibility (verified, strikes, reports) x repeat-view fatigue.
-3. Re-rank: diversity pass against author and ticker repetition; every sixth slot is reserved for a fresh post that has not had an audience yet.
-4. Blend: promoted posts at fixed slots, always labelled.
-
-## Known limits of this MVP
-
-- **Storage** is a single JSON file (`.data/`), fine for one server. Supabase wiring (auth, database, media storage, realtime) is the next phase; the schema is ready.
-- **Accounts** are guest sessions held by a cookie. There is no email, Google or phone sign-in yet.
-- **Payments** are not connected. The Premium button is a demo toggle and is disabled in production builds.
-- **Watchlist, portfolio and alerts** live on the device. Alerts fire only while the app is open.
-- **Market data** comes from unofficial public endpoints and is shown as delayed. Commercial redistribution may need a CSE data licence.
-- **Media screening** runs on the user's device, so a modified client could skip it; unchecked media is held for review and reports still apply.
-- **Sinhala and Tamil** cover navigation labels only.
-
-## Android
+## Build and preview
 
 ```bash
-CAP_SERVER_URL=https://your-domain.lk npx cap add android
-npm run android:open     # build and sign in Android Studio
+npm run build     # writes the site to dist/
+npm run dev       # builds and serves http://localhost:4000
 ```
 
-The Android app loads the hosted web app, so one deploy updates both.
+Requires Node.js 18 or later. Nothing to install.
+
+## Publish
+
+The `dist/` folder is a complete static site and can be hosted anywhere.
+
+**Firebase Hosting** (config included):
+
+```bash
+npm run build
+npx firebase-tools deploy --only hosting --project YOUR_PROJECT_ID
+```
+
+Then connect your domain under Hosting → Add custom domain.
+
+## Before running adverts
+
+1. Set `brand.name`, `site.url` and at least `contact.whatsapp`.
+2. Confirm the prices in `pricing.plans`, or set `pricing.show` to `false`.
+3. Have the privacy policy and terms reviewed, and add your company details.
+4. Add the tracking IDs once the ad accounts are created.
+
+## Layout
+
+`site.config.json` settings · `build.mjs` build and preview server · `src/index.html` the page · `src/privacy.html`, `src/terms.html` legal pages · `src/_partials/` shared head, header and footer · `src/styles.css` · `src/app.js` form and click tracking · `src/img/` product screenshots (fictional sample data).
+
+The earlier stock-market prototype that lived in this repository was removed; it remains in the git history at commit `4905889`.

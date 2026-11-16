@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head.html}}
+<title>Website terms — {{brand.name}}</title>
+<meta name="description" content="Website terms for the {{brand.name}} website." />
+<link rel="canonical" href="{{site.url}}/terms" />
+{{trackingHtml}}
+</head>
+<body>
+{{> header.html}}
+<main id="main" class="section">
+  <div class="wrap wrap--narrow prose">
+    <h1>Website terms</h1>
+    <p class="fine">Last updated November {{brand.year}}. This page covers this website. Clients of the software receive a separate agreement.</p>
+    <h2>About this website</h2>
+    <p>This website describes the {{brand.name}} software, provided by {{brand.company}}. Using the website does not create a contract for the software; that is agreed separately in writing with each client.</p>
+    <h2>Information on this site</h2>
+    <p>Features, screenshots and prices are shown for general information and may change. Screenshots use fictional sample data. A written quotation takes priority over anything stated here.</p>
+    <h2>Prices</h2>
+    <p>Prices are in Sri Lankan rupees and exclude applicable taxes, hardware, and charges billed directly by cloud, payment and messaging providers.</p>
+    <h2>Ownership</h2>
+    <p>The software, this website, its text, designs and the {{brand.name}} name and logo belong to {{brand.company}}. You may not copy or reuse them without written permission.</p>
+    <h2>Liability</h2>
+    <p>We take care to keep this website accurate, but it is provided as it is, and we are not liable for decisions made on the basis of its content alone.</p>
+    <h2>Law</h2>
+    <p>These terms are governed by the laws of Sri Lanka.</p>
+    <h2>Contact</h2>
+    <p>{{brand.company}}, {{contact.city}}. {{emailRow}} {{phoneRow}}</p>
+  </div>
+</main>
+{{> footer.html}}
+</body>
+</html>

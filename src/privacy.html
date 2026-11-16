@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head.html}}
+<title>Privacy policy — {{brand.name}}</title>
+<meta name="description" content="Privacy policy for the {{brand.name}} website." />
+<link rel="canonical" href="{{site.url}}/privacy" />
+{{trackingHtml}}
+</head>
+<body>
+{{> header.html}}
+<main id="main" class="section">
+  <div class="wrap wrap--narrow prose">
+    <h1>Privacy policy</h1>
+    <p class="fine">Last updated November {{brand.year}}. This page covers this website. Clients of the software receive a separate agreement.</p>
+    <h2>Who we are</h2>
+    <p>This website is operated by {{brand.company}}, {{contact.city}}.</p>
+    <h2>What we collect</h2>
+    <ul>
+      <li><strong>Demo requests:</strong> your name, business name, mobile number, city and number of outlets, when you submit the form or message us.</li>
+      <li><strong>Usage data:</strong> pages viewed and buttons pressed, collected through analytics and advertising tools if these are enabled.</li>
+    </ul>
+    <h2>How we use it</h2>
+    <ul>
+      <li>To contact you about the demonstration you asked for and to send a quotation.</li>
+      <li>To measure which pages and adverts are useful.</li>
+    </ul>
+    <p>We do not sell your details and we do not add you to marketing lists without your agreement.</p>
+    <h2>Who we share it with</h2>
+    <p>Service providers that run this website, our messaging and form tools, and advertising platforms that measure advert results. They act on our instructions.</p>
+    <h2>How long we keep it</h2>
+    <p>Demo requests are kept for up to 12 months if you do not become a client, then deleted.</p>
+    <h2>Your rights</h2>
+    <p>Under Sri Lanka&rsquo;s Personal Data Protection Act you may ask to see, correct or delete your details, or withdraw your consent, by contacting us.</p>
+    <h2>Cookies</h2>
+    <p>Analytics and advertising tools may set cookies in your browser. You can block or delete cookies in your browser settings.</p>
+    <h2>Contact</h2>
+    <p>{{brand.company}}, {{contact.city}}. {{emailRow}} {{phoneRow}}</p>
+  </div>
+</main>
+{{> footer.html}}
+</body>
+</html>

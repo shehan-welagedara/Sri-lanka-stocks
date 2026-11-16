@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head.html}}
+<title>{{brand.name}} — {{brand.tagline}}</title>
+<meta name="description" content="{{site.description}}" />
+<link rel="canonical" href="{{site.url}}/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{brand.name}} — {{brand.tagline}}" />
+<meta property="og:description" content="{{site.description}}" />
+<meta property="og:url" content="{{site.url}}/" />
+<meta property="og:image" content="{{site.url}}/img/app-pc-menu.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">{{faqJson}}</script>
+{{trackingHtml}}
+</head>
+<body>
+{{> header.html}}
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="pill">Built for Sri Lankan restaurants and cafés</p>
+        <h1>Know your sales, stock and profit <span class="grad">every night.</span></h1>
+        <p class="lead">{{brand.name}} is the point of sale and back office for restaurants, cafés and bakeries. Bills that follow VAT and SSCL rules, stock that updates with every sale, and your daily numbers on your phone.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#demo" data-cta="hero-demo">Book a free demo</a>
+          <a class="btn btn--light" href="{{waLink}}" data-cta="hero-whatsapp" data-wa>Chat on WhatsApp</a>
+        </div>
+        <ul class="ticks">
+          <li>Works on phones, tablets and PCs</li>
+          <li>VAT, SSCL and service charge built in</li>
+          <li>No server to buy</li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="screen screen--desk"><img src="/img/app-pc-menu.jpg" alt="" width="1708" height="960" /></div>
+        <div class="screen screen--phone"><img src="/img/phone-today.jpg" alt="" width="780" height="1688" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="What you get">
+    <div class="wrap strip__in">
+      <div><strong>One system</strong><span>Counter, kitchen, stock and accounts</span></div>
+      <div><strong>Any device</strong><span>Android, iPad or Windows</span></div>
+      <div><strong>Local tax rules</strong><span>Tax invoices and plain bills</span></div>
+      <div><strong>Your data</strong><span>Your own database, exportable</span></div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Features</p>
+      <h2>Everything a restaurant runs on, in one place</h2>
+
+      <div class="feature">
+        <div class="feature__copy">
+          <h3>A point of sale your staff learn in minutes</h3>
+          <p>Take orders at the counter or the table, send them to the kitchen, and settle the bill the way the guest wants to pay.</p>
+          <ul class="list">
+            <li>Dine-in, takeaway and delivery</li>
+            <li>Kitchen and bar order tickets</li>
+            <li>Split bills across cash, card and QR payments</li>
+            <li>Allergy alerts on every dish</li>
+            <li>Manager approval for voids and discounts</li>
+          </ul>
+        </div>
+        <figure class="shot"><img loading="lazy" src="/img/app-pc-menu.jpg" alt="Point of sale screen showing the menu and an open order with VAT and total" width="1708" height="960" /></figure>
+      </div>
+
+      <div class="feature feature--flip">
+        <div class="feature__copy">
+          <h3>Your day, on your phone</h3>
+          <p>Open the app wherever you are and see how today compares with the same day last week, with anything that needs your attention.</p>
+          <ul class="list">
+            <li>Net sales, covers and average spend</li>
+            <li>Month to date against your target</li>
+            <li>Approvals and tasks waiting for you</li>
+            <li>End-of-day report sent to managers</li>
+          </ul>
+        </div>
+        <figure class="shot shot--phone"><img loading="lazy" src="/img/phone-today.jpg" alt="Owner's phone view showing today's net sales, covers and month to date" width="780" height="1688" /></figure>
+      </div>
+
+      <div class="feature">
+        <div class="feature__copy">
+          <h3>Stock and food cost that keep themselves up to date</h3>
+          <p>Every dish has a recipe, so every sale reduces the right ingredients. You see what you have, what it is worth and what to reorder.</p>
+          <ul class="list">
+            <li>Recipes with portion cost and food cost percentage</li>
+            <li>Purchase orders and goods received</li>
+            <li>Stock counts, waste and transfers</li>
+            <li>Stock value at any time</li>
+          </ul>
+        </div>
+        <figure class="shot"><img loading="lazy" src="/img/inv-stock.jpg" alt="Stock on hand list with quantities, par levels and value per item" width="1366" height="768" /></figure>
+      </div>
+
+      <div class="feature feature--flip">
+        <div class="feature__copy">
+          <h3>Reports and accounts without re-typing</h3>
+          <p>Sales flow into your reports and your books automatically, so month end is a review and not a data-entry job.</p>
+          <ul class="list">
+            <li>Daily revenue, item sales and payment types</li>
+            <li>Best and worst selling dishes</li>
+            <li>Supplier bills, payments and bank reconciliation</li>
+            <li>Profit and loss and balance sheet</li>
+            <li>Audit trail of every change</li>
+          </ul>
+        </div>
+        <figure class="shot"><img loading="lazy" src="/img/bo-dashboard.jpg" alt="Dashboard with net sales for the last 14 days, top items and payments by type" width="1366" height="768" /></figure>
+      </div>
+
+      <div class="grid">
+        <div class="tile"><h4>Roles and PINs</h4><p>Each employee signs in with their own PIN and sees only what their role allows.</p></div>
+        <div class="tile"><h4>Your brand on the bill</h4><p>Logo, colours and bill text are yours, with a designer for the bill layout.</p></div>
+        <div class="tile"><h4>Customers and loyalty</h4><p>Keep visit history and points, and print business buyers on tax invoices.</p></div>
+        <div class="tile"><h4>Excel import</h4><p>Load your menu, prices, recipes and suppliers from one spreadsheet.</p></div>
+        <div class="tile"><h4>Receipt printers</h4><p>USB, network and Bluetooth receipt printers, with a cash drawer.</p></div>
+        <div class="tile"><h4>More than one outlet</h4><p>Run several outlets and revenue centres under one business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>From first demo to first bill</h2>
+      <ol class="steps">
+        <li><span class="steps__n">1</span><h3>See it</h3><p>A 20-minute demonstration on your own phone, using a sample restaurant.</p></li>
+        <li><span class="steps__n">2</span><h3>Try it</h3><p>We load your menu and prices so your staff can try it with real dishes.</p></li>
+        <li><span class="steps__n">3</span><h3>Go live</h3><p>We set up bills, printers and taxes, and train your team on site.</p></li>
+        <li><span class="steps__n">4</span><h3>Stay supported</h3><p>Help by phone and WhatsApp, and updates installed outside your opening hours.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  {{pricingHtml}}
+
+  <section id="faq" class="section section--tint">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">Questions</p>
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        {{faqHtml}}
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="section demo">
+    <div class="wrap demo__in">
+      <div class="demo__copy">
+        <h2>Book a free demo</h2>
+        <p>Tell us about your outlet and we will show you {{brand.name}} on your own phone. No cost and no obligation.</p>
+        <ul class="ticks ticks--light">
+          <li>20 minutes, at your restaurant or online</li>
+          <li>See it with dishes like yours</li>
+          <li>Get a written quotation</li>
+        </ul>
+        <a class="btn btn--light" href="{{waLink}}" data-cta="demo-whatsapp" data-wa>Or message us on WhatsApp</a>
+      </div>
+      <form class="form" id="demo-form" novalidate>
+        <label>Your name<input name="name" autocomplete="name" required maxlength="80" /></label>
+        <label>Restaurant or café name<input name="outlet" autocomplete="organization" required maxlength="80" /></label>
+        <div class="form__row">
+          <label>Mobile number<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="07X XXX XXXX" required maxlength="20" /></label>
+          <label>City<input name="city" autocomplete="address-level2" maxlength="60" /></label>
+        </div>
+        <label>Number of outlets
+          <select name="outlets"><option>1</option><option>2 to 3</option><option>4 or more</option></select>
+        </label>
+        <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off" /></label>
+        <p class="form__msg" id="form-msg" role="status" aria-live="polite"></p>
+        <button class="btn btn--primary btn--block" type="submit">Request my demo</button>
+        <p class="form__fine">We use these details only to contact you about your demo. See our <a href="/privacy">privacy policy</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+{{> footer.html}}
+</body>
+</html>
