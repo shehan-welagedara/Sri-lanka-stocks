@@ -60,7 +60,7 @@ h4 { font-size: 17px; font-weight: 700; }
 .nav__links a { color: #cbd5e1; text-decoration: none; font-size: 15px; font-weight: 600; padding: 12px 0; }
 .nav__links a:hover { color: #fff; }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; min-height: 44px; }
-.logo__mark { display: inline-flex; width: 34px; height: 34px; border-radius: 10px; background: var(--grad); align-items: center; justify-content: center; flex: none; }
+.logo__mark { width: 34px; height: 34px; flex: none; }
 .logo__name { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
 
 /* Hero */

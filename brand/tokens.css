@@ -1,0 +1,18 @@
+/* Enkira brand tokens. Import into any product or page. */
+:root {
+  --enkira-violet: #6a00ff;
+  --enkira-indigo: #4f46e5;
+  --enkira-royal: #0066ff;
+  --enkira-cyan: #00d4ff;
+  --enkira-ink: #0b0f1a;
+  --enkira-midnight: #0b1026;
+  --enkira-slate: #334155;
+  --enkira-muted: #64748b;
+  --enkira-line: #e2e8f0;
+  --enkira-mist: #f8fafc;
+  --enkira-success: #047857;
+  --enkira-warning: #b45309;
+  --enkira-danger: #b91c1c;
+  --enkira-gradient: linear-gradient(100deg, #6a00ff 0%, #0066ff 55%, #00d4ff 100%);
+  --enkira-font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", "Noto Sans Sinhala", "Noto Sans Tamil", sans-serif;
+}

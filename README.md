@@ -1,6 +1,6 @@
 # Business website
 
-Public marketing website for the POS and back-office product (working name: **Polymath**). A static site with no dependencies: one page, a privacy policy and website terms.
+Public marketing website for the POS and back-office product (**Enkira**). A static site with no dependencies: one page, a privacy policy and website terms.
 
 ## Change the name, contact details or prices
 
@@ -52,6 +52,6 @@ Then connect your domain under Hosting → Add custom domain.
 
 ## Layout
 
-`site.config.json` settings · `build.mjs` build and preview server · `src/index.html` the page · `src/privacy.html`, `src/terms.html` legal pages · `src/_partials/` shared head, header and footer · `src/styles.css` · `src/app.js` form and click tracking · `src/img/` product screenshots (fictional sample data).
+`site.config.json` settings · `build.mjs` build and preview server · `src/index.html` the page · `src/privacy.html`, `src/terms.html` legal pages · `src/_partials/` shared head, header and footer · `src/styles.css` · `src/app.js` form and click tracking · `src/img/` product screenshots (fictional sample data) · `brand/` the brand pack: logo files, social images, colour and type tokens, and `brand/guidelines.html`.
 
 The earlier stock-market prototype that lived in this repository was removed; it remains in the git history at commit `4905889`.

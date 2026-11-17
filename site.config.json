@@ -1,8 +1,8 @@
 {
   "_comment": "Everything that changes with the brand lives here. Edit, then run `npm run build`.",
   "brand": {
-    "name": "Polymath",
-    "company": "Polymath Tech",
+    "name": "Enkira",
+    "company": "Enkira Technologies",
     "tagline": "POS and back office for Sri Lankan restaurants",
     "year": "2026"
   },
@@ -26,18 +26,75 @@
     "show": true,
     "note": "Launch prices. Setup includes menu loading, bill and tax configuration, and staff training. Cloud, payment and messaging charges are billed to you directly by those providers.",
     "plans": [
-      { "name": "Starter", "price": "6,500", "setup": "35,000", "for": "Cafés and small takeaways", "features": ["Point of sale on 1 device", "Tables, takeaway and delivery", "Tax-compliant bills", "Daily sales reports", "Customer list"] },
-      { "name": "Professional", "price": "12,500", "setup": "60,000", "for": "Restaurants that track stock", "highlight": true, "features": ["Everything in Starter", "Up to 3 devices", "Recipes and food cost", "Stock, purchasing and stock counts", "End-of-day report by WhatsApp"] },
-      { "name": "Accounting add-on", "price": "5,000", "setup": "20,000", "for": "Owners who want the books in one place", "features": ["General ledger", "Supplier bills and payments", "Profit and loss, balance sheet", "Audit trail and auditor exports"] }
+      {
+        "name": "Starter",
+        "price": "6,500",
+        "setup": "35,000",
+        "for": "Cafés and small takeaways",
+        "features": [
+          "Point of sale on 1 device",
+          "Tables, takeaway and delivery",
+          "Tax-compliant bills",
+          "Daily sales reports",
+          "Customer list"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "12,500",
+        "setup": "60,000",
+        "for": "Restaurants that track stock",
+        "highlight": true,
+        "features": [
+          "Everything in Starter",
+          "Up to 3 devices",
+          "Recipes and food cost",
+          "Stock, purchasing and stock counts",
+          "End-of-day report by WhatsApp"
+        ]
+      },
+      {
+        "name": "Accounting add-on",
+        "price": "5,000",
+        "setup": "20,000",
+        "for": "Owners who want the books in one place",
+        "features": [
+          "General ledger",
+          "Supplier bills and payments",
+          "Profit and loss, balance sheet",
+          "Audit trail and auditor exports"
+        ]
+      }
     ]
   },
   "faq": [
-    ["Do I need to buy special hardware?", "No. It runs in the browser on Android phones and tablets, iPads and Windows PCs. Add a receipt printer and cash drawer if you want printed bills; we will tell you which models work."],
-    ["What happens if the internet drops?", "The point of sale keeps taking orders through short internet drops and syncs when the connection returns. We recommend a 4G backup connection for busy outlets."],
-    ["Does it handle VAT, SSCL and service charge?", "Yes. Taxes are calculated in the order Sri Lankan rules require, with tax invoices for VAT-registered businesses and plain bills for those that are not."],
-    ["Who owns my data?", "You do. Each business has its own database in its own cloud project, and you can export your data at any time."],
-    ["Can I try it before paying?", "Yes. After a demo we set up a trial with your own menu so your staff can use it before you decide."],
-    ["How long does setup take?", "We aim to have you live within a week of receiving your menu and prices. We load the menu, set up bills and train your staff."],
-    ["Is it only for restaurants?", "Restaurants, cafés, bakeries and bars are our focus. Wholesale and retail businesses can also use it; ask us for a demonstration."]
+    [
+      "Do I need to buy special hardware?",
+      "No. It runs in the browser on Android phones and tablets, iPads and Windows PCs. Add a receipt printer and cash drawer if you want printed bills; we will tell you which models work."
+    ],
+    [
+      "What happens if the internet drops?",
+      "The point of sale keeps taking orders through short internet drops and syncs when the connection returns. We recommend a 4G backup connection for busy outlets."
+    ],
+    [
+      "Does it handle VAT, SSCL and service charge?",
+      "Yes. Taxes are calculated in the order Sri Lankan rules require, with tax invoices for VAT-registered businesses and plain bills for those that are not."
+    ],
+    [
+      "Who owns my data?",
+      "You do. Each business has its own database in its own cloud project, and you can export your data at any time."
+    ],
+    [
+      "Can I try it before paying?",
+      "Yes. After a demo we set up a trial with your own menu so your staff can use it before you decide."
+    ],
+    [
+      "How long does setup take?",
+      "We aim to have you live within a week of receiving your menu and prices. We load the menu, set up bills and train your staff."
+    ],
+    [
+      "Is it only for restaurants?",
+      "Restaurants, cafés, bakeries and bars are our focus. Wholesale and retail businesses can also use it; ask us for a demonstration."
+    ]
   ]
 }

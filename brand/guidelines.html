@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enkira brand guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--enkira-font); color: var(--enkira-ink); background: #fff; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, p, ul, figure { margin: 0; }
+  ul { padding-left: 20px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .cover { background: radial-gradient(800px 420px at 90% -10%, rgba(106,0,255,.45), transparent 60%), radial-gradient(600px 380px at 0% 110%, rgba(0,212,255,.22), transparent 60%), var(--enkira-ink); color: #fff; padding: 72px 0 64px; }
+  .cover img { height: 56px; display: block; }
+  .cover h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800; margin-top: 44px; max-width: 720px; }
+  .cover p { color: #cbd5e1; font-size: 18px; margin-top: 16px; max-width: 620px; }
+  .cover small { display: block; margin-top: 28px; color: #94a3b8; font-size: 13.5px; }
+  section { padding: 56px 0; border-bottom: 1px solid var(--enkira-line); }
+  .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--enkira-royal); }
+  h2 { font-size: 30px; letter-spacing: -.02em; font-weight: 800; margin: 6px 0 14px; }
+  h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  p.lead { color: var(--enkira-slate); max-width: 720px; }
+  .grid { display: grid; gap: 16px; margin-top: 28px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .g4 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .tile { border: 1px solid var(--enkira-line); border-radius: 20px; overflow: hidden; background: #fff; }
+  .stage { display: flex; align-items: center; justify-content: center; height: 180px; padding: 24px; }
+  .stage.light { background: var(--enkira-mist); }
+  .stage.dark { background: var(--enkira-ink); }
+  .stage.grad { background: var(--enkira-gradient); }
+  .stage img { max-height: 64px; max-width: 80%; }
+  .stage img.big { max-height: 104px; }
+  .cap { padding: 12px 16px; font-size: 13.5px; color: var(--enkira-slate); border-top: 1px solid var(--enkira-line); }
+  .cap b { color: var(--enkira-ink); display: block; font-size: 14.5px; }
+  .sw { height: 96px; }
+  .sw + .cap code { font-size: 13px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .pad { padding: 22px; }
+  .pad p, .pad li { color: var(--enkira-slate); font-size: 15px; }
+  .type-xl { font-size: 46px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+  .type-l { font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+  .type-m { font-size: 19px; font-weight: 700; }
+  .type-b { font-size: 16px; color: var(--enkira-slate); }
+  .type-s { font-size: 13px; font-weight: 600; color: var(--enkira-muted); }
+  .row { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--enkira-line); }
+  .row:last-child { border: 0; }
+  .row span:first-child { font-size: 12.5px; font-weight: 700; color: var(--enkira-muted); text-transform: uppercase; letter-spacing: .06em; }
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--enkira-line); vertical-align: top; }
+  th { font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--enkira-muted); }
+  .yes { color: var(--enkira-success); font-weight: 700; }
+  .no { color: var(--enkira-danger); font-weight: 700; }
+  .clear { position: relative; display: inline-block; padding: 32px; border: 1.5px dashed #94a3b8; border-radius: 8px; }
+  .clear img { height: 64px; display: block; max-width: none; }
+  .btn { display: inline-flex; align-items: center; height: 48px; padding: 0 24px; border-radius: 999px; font-weight: 700; font-size: 15px; }
+  .btn.p { background: var(--enkira-gradient); color: #fff; }
+  .btn.s { border: 1px solid var(--enkira-line); }
+  footer { padding: 32px 0 48px; color: var(--enkira-muted); font-size: 13.5px; }
+  @media print { section { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <img src="logo/enkira-lockup-on-dark.svg" alt="Enkira" />
+    <h1>Brand guidelines</h1>
+    <p>How Enkira looks, sounds and names its products. Use this for the software, the website, adverts, proposals and printed material.</p>
+    <small>Version 1.0 · November 2026 · Working brand. Trademark and company name clearance are pending; use ™, not ®.</small>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <p class="eyebrow">01 · Brand idea</p>
+  <h2>Master every part of your business</h2>
+  <p class="lead">Enkira takes its name from Enki, the Sumerian god of wisdom, craft and fresh water, who knew every art and kept the measures of civilisation. Enkira gives a business owner the same command: one system that knows the counter, the kitchen, the stores and the books.</p>
+  <div class="grid g3">
+    <div class="tile pad"><h3>Name</h3><p>Written <b>Enkira</b>, capital E only. Said <b>en-KEE-ra</b>. Never ENKIRA in running text, and never used as a verb.</p></div>
+    <div class="tile pad"><h3>Tagline</h3><p><b>Master every part of your business.</b><br />Short form for adverts: <b>One system. Complete control.</b></p></div>
+    <div class="tile pad"><h3>Descriptor</h3><p>POS and back office for Sri Lankan restaurants. Use beside the logo wherever people may not know what Enkira is.</p></div>
+  </div>
+  <div class="grid g3">
+    <div class="tile pad"><h3>Promise</h3><p>Know your sales, stock and profit every night.</p></div>
+    <div class="tile pad"><h3>Who it is for</h3><p>Owners of restaurants, cafés and bakeries with one to three outlets.</p></div>
+    <div class="tile pad"><h3>Why believe it</h3><p>Sri Lankan tax rules built in, stock deducted from every sale, and it runs on the phone in your pocket.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">02 · Logo</p>
+  <h2>The mark and the wordmark</h2>
+  <p class="lead">The mark is three flowing lines that form the letter E. They stand for Enki's streams of water and for the three layers Enkira joins: selling, stock and accounts. The wordmark is set in Plus Jakarta Sans ExtraBold and supplied as outlines.</p>
+  <div class="grid g2">
+    <figure class="tile"><div class="stage light"><img src="logo/enkira-lockup-on-light.svg" alt="" /></div><figcaption class="cap"><b>Primary lockup, on light</b>enkira-lockup-on-light.svg</figcaption></figure>
+    <figure class="tile"><div class="stage dark"><img src="logo/enkira-lockup-on-dark.svg" alt="" /></div><figcaption class="cap"><b>Primary lockup, on dark</b>enkira-lockup-on-dark.svg</figcaption></figure>
+  </div>
+  <div class="grid g4">
+    <figure class="tile"><div class="stage light"><img class="big" src="logo/enkira-mark.svg" alt="" /></div><figcaption class="cap"><b>Mark</b>App icons, favicons, avatars</figcaption></figure>
+    <figure class="tile"><div class="stage light"><img class="big" src="logo/enkira-stacked-on-light.svg" alt="" /></div><figcaption class="cap"><b>Stacked</b>Square spaces</figcaption></figure>
+    <figure class="tile"><div class="stage light"><img class="big" src="logo/enkira-mark-mono-dark.svg" alt="" /></div><figcaption class="cap"><b>One colour, dark</b>Receipts, stamps, fax</figcaption></figure>
+    <figure class="tile"><div class="stage grad"><img class="big" src="logo/enkira-mark-mono-white.svg" alt="" /></div><figcaption class="cap"><b>One colour, white</b>On photos and colour</figcaption></figure>
+  </div>
+  <div class="grid g2">
+    <div class="tile pad">
+      <h3>Clear space and size</h3>
+      <p style="margin-bottom:18px">Keep a margin equal to half the mark's height on every side. Smallest sizes: lockup 96 px or 25 mm wide; mark 16 px or 5 mm.</p>
+      <div class="clear"><img src="logo/enkira-lockup-on-light.svg" alt="" /></div>
+    </div>
+    <div class="tile pad">
+      <h3>Do not</h3>
+      <ul>
+        <li>Change the colours or the gradient direction.</li>
+        <li>Stretch, rotate, outline or add shadows.</li>
+        <li>Retype the wordmark in another font.</li>
+        <li>Place the colour logo on a busy photo; use the white version.</li>
+        <li>Put the mark inside another shape.</li>
+        <li>Use the mark as the letter E in a word.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">03 · Colour</p>
+  <h2>Deep ink, lit by one gradient</h2>
+  <p class="lead">Most surfaces are white or ink. The gradient is the signature and is kept for the logo, primary buttons and one highlight per screen. Text never sits on the gradient except white, bold, 16 px or larger.</p>
+  <div class="grid g4">
+    <div class="tile"><div class="sw" style="background:#6A00FF"></div><div class="cap"><b>Violet</b><code>#6A00FF</code></div></div>
+    <div class="tile"><div class="sw" style="background:#0066FF"></div><div class="cap"><b>Royal</b><code>#0066FF</code> · links, focus</div></div>
+    <div class="tile"><div class="sw" style="background:#00D4FF"></div><div class="cap"><b>Cyan</b><code>#00D4FF</code> · on dark only</div></div>
+    <div class="tile"><div class="sw" style="background:var(--enkira-gradient)"></div><div class="cap"><b>Brand gradient</b>100°, violet → royal → cyan</div></div>
+    <div class="tile"><div class="sw" style="background:#0B0F1A"></div><div class="cap"><b>Ink</b><code>#0B0F1A</code> · text, dark surfaces</div></div>
+    <div class="tile"><div class="sw" style="background:#0B1026"></div><div class="cap"><b>Midnight</b><code>#0B1026</code></div></div>
+    <div class="tile"><div class="sw" style="background:#334155"></div><div class="cap"><b>Slate</b><code>#334155</code> · body text</div></div>
+    <div class="tile"><div class="sw" style="background:#64748B"></div><div class="cap"><b>Muted</b><code>#64748B</code> · captions</div></div>
+    <div class="tile"><div class="sw" style="background:#E2E8F0"></div><div class="cap"><b>Line</b><code>#E2E8F0</code></div></div>
+    <div class="tile"><div class="sw" style="background:#F8FAFC;border-bottom:1px solid #E2E8F0"></div><div class="cap"><b>Mist</b><code>#F8FAFC</code> · section tint</div></div>
+    <div class="tile"><div class="sw" style="background:#047857"></div><div class="cap"><b>Success</b><code>#047857</code></div></div>
+    <div class="tile"><div class="sw" style="background:#B91C1C"></div><div class="cap"><b>Danger</b><code>#B91C1C</code></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">04 · Typography</p>
+  <h2>Plus Jakarta Sans</h2>
+  <p class="lead">One family for everything, free under the Open Font License. Sinhala and Tamil text falls back to Noto Sans Sinhala and Noto Sans Tamil. Numbers in tables use tabular figures.</p>
+  <div class="tile pad" style="margin-top:28px">
+    <div class="row"><span>Display</span><div class="type-xl">Know your numbers</div></div>
+    <div class="row"><span>Heading</span><div class="type-l">Stock that keeps itself up to date</div></div>
+    <div class="row"><span>Subhead</span><div class="type-m">A point of sale your staff learn in minutes</div></div>
+    <div class="row"><span>Body</span><div class="type-b">Every dish has a recipe, so every sale reduces the right ingredients. You see what you have, what it is worth and what to reorder.</div></div>
+    <div class="row"><span>Caption</span><div class="type-s">Prices in Sri Lankan rupees, excluding taxes</div></div>
+    <div class="row"><span>Buttons</span><div style="display:flex;gap:12px;flex-wrap:wrap"><span class="btn p">Book a free demo</span><span class="btn s">See pricing</span></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">05 · Voice</p>
+  <h2>Plain, exact and on the owner's side</h2>
+  <p class="lead">Write the way a trusted accountant speaks to a restaurant owner: short sentences, real numbers, no jargon. Say what the system does, never how clever it is.</p>
+  <table>
+    <tr><th>Principle</th><th>Write</th><th>Not</th></tr>
+    <tr><td><b>Concrete</b></td><td class="yes">See today's sales on your phone.</td><td class="no">Unlock real-time business intelligence.</td></tr>
+    <tr><td><b>Owner's words</b></td><td class="yes">Know where your stock went.</td><td class="no">Optimise inventory variance.</td></tr>
+    <tr><td><b>Honest</b></td><td class="yes">Keeps taking orders through short internet drops.</td><td class="no">Works 100% offline, always.</td></tr>
+    <tr><td><b>Local</b></td><td class="yes">VAT, SSCL and service charge in the right order.</td><td class="no">Fully tax compliant worldwide.</td></tr>
+    <tr><td><b>Calm</b></td><td class="yes">We aim to have you live within a week.</td><td class="no">Go live instantly!!!</td></tr>
+  </table>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">06 · Product names</p>
+  <h2>One brand, four products</h2>
+  <table>
+    <tr><th>Name</th><th>What it is</th><th>Use</th></tr>
+    <tr><td><b>Enkira POS</b></td><td>The point of sale on registered devices</td><td>App name, sign-in screen, receipts ("Powered by Enkira")</td></tr>
+    <tr><td><b>Enkira ERP</b></td><td>The back office: stock, purchasing, accounts, people</td><td>App name, manuals</td></tr>
+    <tr><td><b>Enkira Console</b></td><td>The company's own tool for managing clients</td><td>Internal only</td></tr>
+    <tr><td><b>Enkira Hospitality · Enkira Retail</b></td><td>Industry editions</td><td>Proposals and price lists</td></tr>
+  </table>
+  <p class="lead" style="margin-top:20px">Always "Enkira" plus a plain word. No new invented product names. The company is written <b>Enkira Technologies</b> until the registered name is confirmed.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">07 · Legal marks</p>
+  <h2>™ now, ® only after registration</h2>
+  <div class="grid g3">
+    <div class="tile pad"><h3>Trademark</h3><p>Write Enkira™ on first mention in formal documents. Change to ® only when the certificate is issued.</p></div>
+    <div class="tile pad"><h3>Copyright line</h3><p>© 2026 Enkira Technologies. All rights reserved.<br />Use in the software, manuals, website and proposals.</p></div>
+    <div class="tile pad"><h3>On client bills</h3><p>"Powered by Enkira" in small text at the foot. The client's own logo always leads.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Enkira brand guidelines 1.0 · Files: <code>brand/logo</code> (SVG), <code>brand/social</code> (PNG), <code>brand/tokens.css</code>, <code>brand/tokens.json</code>.</div></footer>
+</body>
+</html>
